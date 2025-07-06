@@ -48,4 +48,12 @@
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
     </bean>
+
+    <bean id="MarkDao" class="com.wwsis.sos.dao.impl.MarkDaoImpl"/>
+    </bean>
+    <bean id="EmailChangeDao" class="com.wwsis.sos.dao.impl.EmailChangeDaoImpl"/>
+    </bean>
+    <bean id="PaymentDao" class="com.wwsis.sos.dao.impl.PaymentDaoImpl"/>
+    </bean>
+    
 </beans>

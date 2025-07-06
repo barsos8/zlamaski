@@ -1,7 +1,9 @@
-package pl.wwsis.sos.dao;
-import java.persistance.EntityManager;
-import java.persistance.Query;
+package pl.wwsis.sos.dao.impl;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import pl.wwsis.sos.model.Payment;
+import pl.wwsis.sos.dao.PaymentDao;
 import pl.wwsis.sos.model.Student;
 import java.util.List;
 

@@ -88,6 +88,7 @@ CREATE TABLE marks (
     enrollment_id INT,
     date TIMESTAMP,
     value FLOAT,
+    is_final BOOLEAN,
     type VARCHAR(20) CHECK (type IN ('EXAM', 'ASSIGNMENT', 'PROJECT')),
     comment VARCHAR(5000),
     FOREIGN KEY (enrollment_id) REFERENCES enrollments(enrollment_id)

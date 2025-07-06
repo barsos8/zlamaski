@@ -33,8 +33,8 @@ INSERT INTO enrollments (enrollment_id, student_id, subject_id, schedule_id, sem
 VALUES (1, 'S12345', 1, 1, '2024Z', '2024-07-01 10:00:00', 'ACTIVE', FALSE, '2025-09-15');
 
 -- INSERT DATA FOR MARKS
-INSERT INTO marks (mark_id, enrollment_id, date, value, type, comment)
-VALUES (1, 1, '2025-01-30 10:00:00', 4.5, 'EXAM', 'Final exam');
+INSERT INTO marks (mark_id, enrollment_id, date, value, type, comment,is_final)
+VALUES (1, 1, '2025-01-30 10:00:00', 4.5, 'EXAM', 'Final exam', TRUE);
 
 -- INSERT DATA FOR BOOKS
 INSERT INTO books (book_id, title, author, publisher, issue_date, status)

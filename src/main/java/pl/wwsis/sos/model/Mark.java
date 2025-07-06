@@ -27,8 +27,14 @@ public class Mark {
     @Column(name = "comment", length = 5000)
     private String comment;
 
+    @Column(name = "is_final")
+    private Boolean isFinal;
+
     // Gettery i Settery
 
+    public Boolean isFinal() { return isFinal; }
+    public void setFinal(Boolean isFinal) { this.isFinal = isFinal; }
+    
     public Integer getMarkId() { return markId; }
     public void setMarkId(Integer markId) { this.markId = markId; }
 

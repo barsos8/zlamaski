@@ -7,4 +7,5 @@ import java.util.List;
 public interface PaymentDao {
 
     List<Payment> viewPaymentsHistory(Student student);
+    Boolen checkOutstandingPayments(Student student);
 }

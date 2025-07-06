@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface SubjectDao {
 
-    Subject getDetauks()
+    Subject getDetails();
     List<Enrollment> listEnrollments();
     List<Subject> searchByName(String name);
     List<Subject> sortSubjectsBy(String criteria);

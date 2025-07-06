@@ -43,8 +43,8 @@ public class Notification {
     public Integer getUserId() { return userId; }
     public void setUserId(Integer userId) { this.userId = userId; }
 
-    public String getRole() { return role; }
-    public void setRole(String role) { this.role = role; }
+    public Role getRole() { return role; }
+    public void setRole(Role role) { this.role = role; }
 
     public Integer getGroupId() { return groupId; }
     public void setGroupId(Integer groupId) { this.groupId = groupId; }
@@ -54,9 +54,6 @@ public class Notification {
 
     public NotificationChannel getChannel() { return channel; }
     public void setChannel(NotificationChannel channel) { this.channel = channel; }
-
-    public String getChannel() { return channel; }
-    public void setChannel(String channel) { this.channel = channel; }
 
     public Timestamp getSentDate() { return sentDate; }
     public void setSentDate(Timestamp sentDate) { this.sentDate = sentDate; }

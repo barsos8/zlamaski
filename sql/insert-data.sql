@@ -99,8 +99,8 @@ INSERT INTO enrollments (enrollment_id, student_id, subject_id, schedule_id, sem
 VALUES (2, 'S12346', 2, 2, '2024Z', '2024-08-20 12:00:00', 'ACTIVE', false, '2024-11-01');
 
 -- ocena dla drugiego studenta
-INSERT INTO marks (mark_id, enrollment_id, date, value, type, comment)
-VALUES (2, 2, '2024-12-10 09:00:00', 5.0, 'PROJECT', 'Database design');
+INSERT INTO marks (mark_id, enrollment_id, date, value, type, comment,is_final)
+VALUES (2, 2, '2024-12-10 09:00:00', 5.0, 'PROJECT', 'Database design', true);
 
 -- nowa książka i wypożyczenie przez studenta
 INSERT INTO books (book_id, title, author, publisher, issue_date, status)

@@ -1,6 +1,6 @@
 package pl.wwsis.sos.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "teachers")

@@ -70,7 +70,7 @@ CREATE TABLE schedule (
 
 CREATE TABLE enrollments (
     enrollment_id INT PRIMARY KEY,
-    student_id VARCHAR(20),
+    indeks_no VARCHAR(20),
     subject_id INT,
     schedule_id INT NULL,
     semester VARCHAR(20),
@@ -78,7 +78,7 @@ CREATE TABLE enrollments (
     status VARCHAR(20) CHECK (status IN ('ACTIVE', 'WITHDRAWN')),
     is_waiting_on_list BOOLEAN,
     resignation_deadline DATE,
-    FOREIGN KEY (student_id) REFERENCES students(indeks_no),
+    FOREIGN KEY (indeks_no) REFERENCES students(indeks_no),
     FOREIGN KEY (subject_id) REFERENCES subjects(subject_id),
     FOREIGN KEY (schedule_id) REFERENCES schedule(schedule_id)
 );
@@ -88,10 +88,12 @@ CREATE TABLE marks (
     enrollment_id INT,
     date TIMESTAMP,
     value FLOAT,
+    teacher_id INT,
     is_final BOOLEAN,
     type VARCHAR(20) CHECK (type IN ('EXAM', 'ASSIGNMENT', 'PROJECT')),
     comment VARCHAR(5000),
     FOREIGN KEY (enrollment_id) REFERENCES enrollments(enrollment_id)
+    FOREIGN KEY (teacher_id) REFERENCES teachers(user_id)
 );
 
 CREATE TABLE books (
@@ -106,29 +108,28 @@ CREATE TABLE books (
 CREATE TABLE rent_book (
     rent_book_id INT PRIMARY KEY,
     book_id INT,
-    student_id VARCHAR(20),
+    indeks_no VARCHAR(20),
     rent_date TIMESTAMP,
     return_date TIMESTAMP,
     returned BOOLEAN,
     overdue BOOLEAN,
     FOREIGN KEY (book_id) REFERENCES books(book_id),
-    FOREIGN KEY (student_id) REFERENCES students(indeks_no)
+    FOREIGN KEY (indeks_no) REFERENCES students(indeks_no)
 );
 
 CREATE TABLE payments (
     payment_id INT PRIMARY KEY,
-    student_id  VARCHAR(20),
+    indeks_no  VARCHAR(20),
     amount DECIMAL(10, 2),
     payment_date TIMESTAMP,
     status VARCHAR(20) CHECK (status IN ('PAID', 'UNPAID', 'OVERDUE')),
-    FOREIGN KEY (student_id) REFERENCES students(indeks_no)
+    FOREIGN KEY (indeks_no) REFERENCES students(indeks_no)
 );
 
 CREATE TABLE login_attempt (
     login_attempt_id INT PRIMARY KEY,
     user_id INT,
     date TIMESTAMP,
-    number_attempts INT,
     success BOOLEAN,
     ip_address VARCHAR(50),
     FOREIGN KEY (user_id) REFERENCES users(user_id)

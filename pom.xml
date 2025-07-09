@@ -23,16 +23,6 @@
 
     <dependencies>
 
-        <dependency>
-
-            <groupId>jakarta.persistence</groupId>
-
-            <artifactId>jakarta.persistence-api</artifactId>
-
-            <version>3.1.0</version>
-
-        </dependency>
-
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>

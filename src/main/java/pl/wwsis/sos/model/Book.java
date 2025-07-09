@@ -1,6 +1,6 @@
 package pl.wwsis.sos.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity

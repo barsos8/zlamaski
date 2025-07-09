@@ -20,6 +20,9 @@ public class Mark {
     @Column(name = "value")
     private Float value;
 
+    @Column(name = "teacher_id")
+    private Integer teacherId;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "type", length = 20)
     private MarkType type;
@@ -46,6 +49,9 @@ public class Mark {
 
     public Float getValue() { return value; }
     public void setValue(Float value) { this.value = value; }
+
+    public Integer getTeacherId() { return teacherId; }
+    public void setTeacherId(Integer teacherId) { this.teacherId = teacherId; }
 
     public MarkType getType() { return type; }
     public void setType(MarkType type) { this.type = type; }

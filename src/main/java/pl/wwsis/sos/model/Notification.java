@@ -52,6 +52,9 @@ public class Notification {
     public String getMessage() { return message; }
     public void setMessage(String message) { this.message = message; }
 
+    public NotificationType getType() { return type; }
+    public void setType(NotificationType type) { this.type = type; }
+
     public NotificationChannel getChannel() { return channel; }
     public void setChannel(NotificationChannel channel) { this.channel = channel; }
 

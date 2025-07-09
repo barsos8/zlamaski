@@ -12,8 +12,8 @@ public class Enrollment {
     @Column(name = "enrollment_id")
     private Integer enrollmentId;
 
-    @Column(name = "student_id", length = 20)
-    private String studentId;
+    @Column(name = "indeks_no", length = 20)
+    private String indeksNo;
 
     @Column(name = "subject_id")
     private Integer subjectId;

@@ -14,8 +14,8 @@ public class RentBook {
     @Column(name = "book_id")
     private Integer bookId;
 
-    @Column(name = "student_id", length = 20)
-    private String studentId;
+    @Column(name = "indeks_no", length = 20)
+    private String indeksNo;
 
     @Column(name = "rent_date")
     private Timestamp rentDate;

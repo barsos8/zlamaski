@@ -17,9 +17,6 @@ public class LoginAttempt {
     @Column(name = "date")
     private Timestamp date;
 
-    @Column(name = "number_attempts")
-    private Integer numberAttempts;
-
     @Column(name = "success")
     private Boolean success;
 

@@ -12,8 +12,8 @@ public class Payment {
     @Column(name = "payment_id")
     private Integer paymentId;
 
-    @Column(name = "student_id", length = 20)
-    private String studentId;
+    @Column(name = "indeks_no", length = 20)
+    private String indeksNo;
 
     @Column(name = "amount", precision = 10, scale = 2)
     private BigDecimal amount;
@@ -29,8 +29,8 @@ public class Payment {
     public Integer getPaymentId() { return paymentId; }
     public void setPaymentId(Integer paymentId) { this.paymentId = paymentId; }
 
-    public String getStudentId() { return studentId; }
-    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public String getIndeksNo() { return indeksNo; }
+    public void setIndeksNo(String indeksNo) { this.indeksNo = indeksNo; }
 
     public BigDecimal getAmount() { return amount; }
     public void setAmount(BigDecimal amount) { this.amount = amount; }

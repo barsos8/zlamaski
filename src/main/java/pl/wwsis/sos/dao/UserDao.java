@@ -5,14 +5,19 @@ import pl.wwsis.sos.model.LoginAttempt;
 import java.util.List;
 
 public interface UserDao {
-    
+    void save(User user);
+    User findById(Integer userId);
+    List<User> findAll();
+    User findByEmail(String email);
+    void update(User user);
+    void delete(Integer userId);
+
     boolean login(String email, String password);
-    void logout();
+    void logout(Integer userId);
     boolean resetPassword(String email);
-    boolean register();
+    boolean register(User user);
     boolean activateAccount(String token);
-    boolean changePassword(String oldPassword, String newPassword);
+    boolean changePassword(Integer userId, String oldPassword, String newPassword);
     void editProfile(User user);
-    List<LoginAttempt> getLoginAttempts();
-    List<User> getAllUsers();
+    List<LoginAttempt> getLoginAttempts(Integer userId);
 }

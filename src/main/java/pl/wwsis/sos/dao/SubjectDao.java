@@ -5,10 +5,16 @@ import pl.wwsis.sos.model.Enrollment;
 import java.util.List;
 
 public interface SubjectDao {
+    void save(Subject subject);
+    Subject findById(Integer subjectId);
+    List<Subject> findAvailableSubjects(String semester);
+    List<Subject> findAll();
+    List<Subject> findBySemester(String semester);
+    void update(Subject subject);
+    void delete(Integer subjectId);
 
-    Subject getDetails();
-    List<Enrollment> listEnrollments();
+    Subject getDetails(Integer subjectId);
+    List<Enrollment> listEnrollments(Integer subjectId);
     List<Subject> searchByName(String name);
-    List<Subject> sortSubjectsBy(String criteria);
-    List<Subject> listAvailableSubjects();
+    List<Subject> listAllSubjects(String semester);
 }

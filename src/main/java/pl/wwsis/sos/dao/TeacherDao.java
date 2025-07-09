@@ -9,9 +9,15 @@ import pl.wwsis.sos.model.MarkType;
 import java.util.List;
 
 public interface TeacherDao {
+    void save(Teacher teacher);
+    Teacher findById(Integer userId);
+    List<Teacher> findAll();
+    void delete(Teacher teacher);
+    void update(Teacher teacher);
     
-    List<Schedule> getSchedule(String semester);
-    Mark assignGrade(Student student, Schedule schedule, float markValue, MarkType type, String comment);
-    List<Mark> getMarks(Enrollment enrollment);
-    List<Teacher> getAllTeachers();
+    Teacher findByEmail(String email);
+    List<Teacher> findBySubjectId(Integer subjectId);
+    List<Schedule> getSchedule(Integer teacherId, String semester);
+    Mark assignGrade(Integer teacherId, Integer enrollmentId, float markValue, MarkType type, String comment);
+    List<Mark> getMarks(Integer enrollmentId);
 }

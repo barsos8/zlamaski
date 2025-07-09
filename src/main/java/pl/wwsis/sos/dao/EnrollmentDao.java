@@ -4,9 +4,18 @@ import pl.wwsis.sos.model.Mark;
 import java.util.List;
 
 public interface EnrollmentDao {
-    Boolean confirmEnrollment();
-    Boolean withdrawEnrollment();
-    Boolean checkWaitlistStatus();
-    Boolean isOnWaitlist();
-    List<Mark> getMarks();
+    void save(Enrollment enrollment);
+    Enrollment findById(Integer enrollmentId);
+    void enrollStudent(Enrollment enrollment);
+    void withdrawStudent(Integer enrollmentId);
+    List<Enrollment> findAll();
+    List<Enrollment> findByStudentIndeksNo(String indeksNo);
+    List<Enrollment> findBySubjectId(Integer subjectId);
+    List<Enrollment> findByStatus(EnrollmentStatus status);
+    void update(Enrollment enrollment);
+    void delete(Enrollment enrollment);
+
+    Boolean confirmEnrollment(Integer enrollmentId);
+    Boolean withdrawEnrollment(Integer enrollmentId);
+    Boolean isOnWaitlist(Integer enrollmentId);
 }

@@ -5,9 +5,16 @@ import pl.wwsis.sos.model.User;
 import java.util.List;
 
 public interface RentBookDao {
+    void save(RentBook rentBook);
+    RentBook findById(Integer rentBookId);
+    List<RentBook> findAll();
+    List<RentBook> findByIndeksNo(String indeksNo);
+    List<RentBook> findByBookId(Integer bookId);
+    void update(RentBook rentBook);
+    void delete(Integer rentBookId);
 
-    List<RentBook> viewCurrentRentals(User user);
-    List<RentBook> viewOverdueBooks(User user);
-    List<RentBook> viewReturnedBooks(User user);
-    List<RentBook> getLibraryStatus(User user);
+    List<RentBook> viewCurrentRentals(String indeksNo);
+    List<RentBook> viewOverdueBooks(String indeksNo);
+    List<RentBook> viewReturnedBooks(String indeksNo);
+    List<RentBook> getLibraryStatus(String indeksNo);
 }

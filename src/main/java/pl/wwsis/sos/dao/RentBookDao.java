@@ -1,7 +1,6 @@
 package pl.wwsis.sos.dao;
 
 import pl.wwsis.sos.model.RentBook;
-import pl.wwsis.sos.model.User;
 import java.util.List;
 
 public interface RentBookDao {

@@ -1,7 +1,6 @@
 package pl.wwsis.sos.dao;
 
-import pl.wwsis.sos.model.Student;
-import pl.wwsis.sos.model.Schedule;
+import pl.wwsis.sos.model.Group;
 import java.util.List;
 
 public interface GroupDao {

@@ -1,7 +1,6 @@
 package pl.wwsis.sos.dao;
 
 import pl.wwsis.sos.model.Schedule;
-import pl.wwsis.sos.model.Group;
 import pl.wwsis.sos.model.DayOfWeek;
 import java.util.List;
 

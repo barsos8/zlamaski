@@ -1,10 +1,8 @@
 package pl.wwsis.sos.dao;
 
 import pl.wwsis.sos.model.Schedule;
-import pl.wwsis.sos.model.Student;
 import pl.wwsis.sos.model.Mark;
 import pl.wwsis.sos.model.Teacher;
-import pl.wwsis.sos.model.Enrollment;
 import pl.wwsis.sos.model.MarkType;
 import java.util.List;
 

@@ -1,6 +1,7 @@
 package pl.wwsis.sos.dao;
 
-import pl.wwsis.sos.model.Mark;
+import pl.wwsis.sos.model.Enrollment;
+import pl.wwsis.sos.model.EnrollmentStatus;
 import java.util.List;
 
 public interface EnrollmentDao {

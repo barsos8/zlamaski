@@ -5,6 +5,8 @@ import pl.wwsis.sos.model.Teacher;
 import pl.wwsis.sos.model.Group;
 import pl.wwsis.sos.model.SubjectTeach;
 
+import java.util.List;
+
 public interface SubjectTeachDao {
     void save(SubjectTeach subjectTeach);
     SubjectTeach findById(Integer subjectTeachId);

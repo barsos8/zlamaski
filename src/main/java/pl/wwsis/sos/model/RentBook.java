@@ -36,8 +36,8 @@ public class RentBook {
     public Integer getBookId() { return bookId; }
     public void setBookId(Integer bookId) { this.bookId = bookId; }
 
-    public String getStudentId() { return studentId; }
-    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public String getIndeksNo() { return indeksNo; }
+    public void setIndeksNo(String indeksNo) { this.indeksNo = indeksNo; }
 
     public Timestamp getRentDate() { return rentDate; }
     public void setRentDate(Timestamp rentDate) { this.rentDate = rentDate; }

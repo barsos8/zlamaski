@@ -1,12 +1,8 @@
 package pl.wwsis.sos.dao;
 
-import pl.wwsis.sos.model.User;
-import pl.wwsis.sos.model.Group;
-import pl.wwsis.sos.model.Role;
-import pl.wwsis.sos.model.NotificationChannel;
+import pl.wwsis.sos.model.*;
+
 import java.util.List;
-
-
 
 public interface NotificationDao {
     void save(Notification notification);

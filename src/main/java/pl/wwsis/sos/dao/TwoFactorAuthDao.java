@@ -1,5 +1,7 @@
 package pl.wwsis.sos.dao;
 
+import pl.wwsis.sos.model.TwoFactorAuth;
+
 public interface TwoFactorAuthDao {
     void save(TwoFactorAuth tfa);
     TwoFactorAuth findById(Integer tfaId);

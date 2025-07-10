@@ -33,9 +33,6 @@ public class LoginAttempt {
     public Timestamp getDate() { return date; }
     public void setDate(Timestamp date) { this.date = date; }
 
-    public Integer getNumberAttempts() { return numberAttempts; }
-    public void setNumberAttempts(Integer numberAttempts) { this.numberAttempts = numberAttempts; }
-
     public Boolean getSuccess() { return success; }
     public void setSuccess(Boolean success) { this.success = success; }
 

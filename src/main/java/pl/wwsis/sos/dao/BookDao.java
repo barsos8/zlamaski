@@ -1,6 +1,8 @@
 package pl.wwsis.sos.dao;
 
 import pl.wwsis.sos.model.Book;
+import pl.wwsis.sos.model.BookStatus;
+
 import java.util.List;
 
 public interface BookDao {

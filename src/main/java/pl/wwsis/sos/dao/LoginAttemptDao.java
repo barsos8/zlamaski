@@ -1,6 +1,8 @@
 package pl.wwsis.sos.dao;
 
-import pl.wwsis.sos.model.Student;
+import pl.wwsis.sos.model.LoginAttempt;
+
+import java.util.List;
 
 public interface LoginAttemptDao {
     void save(LoginAttempt loginAttempt);
@@ -9,7 +11,7 @@ public interface LoginAttemptDao {
     List<LoginAttempt> findByUserId(Integer userId);
     void delete(Integer loginAttemptId);
 
-    boolean shouldLockAccount(Integer userId)
+    boolean shouldLockAccount(Integer userId);
     int countFailedAttempts(Integer userId); // ile nieudanych prób z rzędu
     void resetFailedAttempts(Integer userId);
 }

@@ -42,8 +42,8 @@ public class Enrollment {
     public Integer getEnrollmentId() { return enrollmentId; }
     public void setEnrollmentId(Integer enrollmentId) { this.enrollmentId = enrollmentId; }
 
-    public String getStudentId() { return studentId; }
-    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public String getIndeksNo() { return indeksNo; }
+    public void setIndeksNo(String studentId) { this.indeksNo = indeksNo; }
 
     public Integer getSubjectId() { return subjectId; }
     public void setSubjectId(Integer subjectId) { this.subjectId = subjectId; }

@@ -1,21 +1,23 @@
 package pl.wwsis.sos.dao.impl;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
 import pl.wwsis.sos.model.Payment;
 import pl.wwsis.sos.dao.PaymentDao;
 import pl.wwsis.sos.model.Student;
 
 import java.util.List;
 
-
+@Repository
+@Transactional
 public class PaymentDaoImpl implements PaymentDao {
 
+    @PersistenceContext
     private EntityManager entityManager;
-
-    public PaymentDaoImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
 
     @Override
     public List<Payment> viewPaymentsHistory(Student student) {

@@ -1,5 +1,6 @@
 package pl.wwsis.sos.dao.impl;
 
+import org.springframework.stereotype.Repository;
 import pl.wwsis.sos.dao.EmailChangeDao;
 import pl.wwsis.sos.model.EmailChange;
 import pl.wwsis.sos.model.EmailChangeStatus;
@@ -7,8 +8,10 @@ import javax.transaction.Transactional;
 import javax.persistence.PersistenceContext;
 import javax.persistence.EntityManager;
 
+@Repository
 @Transactional
 public class EmailChangeDaoImpl implements EmailChangeDao {
+
     @PersistenceContext
     EntityManager entityManager;
 

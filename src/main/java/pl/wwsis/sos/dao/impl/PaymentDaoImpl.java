@@ -19,15 +19,17 @@ public class PaymentDaoImpl implements PaymentDao {
 
     @Override
     public List<Payment> viewPaymentsHistory(Student student) {
-        Query query = entityManager.createQuery("SELECT p FROM Payment p WHERE p.student = :student");
-        query.setParameter("student", student);
+        String studentIndeksNo = student.getIndeksNo();
+        Query query = entityManager.createQuery("SELECT p FROM Payment p WHERE p.indeksNo = :studentIndeksNo");
+        query.setParameter("studentIndeksNo", studentIndeksNo);
         return query.getResultList();
     }
 
     @Override
     public Boolean checkOutstandingPayments(Student student) {
-        Query query = entityManager.createQuery("SELECT COUNT(p) > 0 FROM Payment p WHERE p.student = :student AND p.status = 'OVERDUE'");
-        query.setParameter("student", student);
+        String studentIndeksNo = student.getIndeksNo();
+        Query query = entityManager.createQuery("SELECT COUNT(p) > 0 FROM Payment p WHERE p.indeksNo = :studentIndeksNo AND p.status = 'OVERDUE'");
+        query.setParameter("studentIndeksNo", studentIndeksNo);
         return (Boolean) query.getSingleResult();
     }
 }
